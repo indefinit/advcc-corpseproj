@@ -72,6 +72,7 @@ void ofApp::draw(){
 
 	float time = ofGetElapsedTimef();
     ofDrawRectangle(100+cos(time)*30, 100+cos(time)*30, 200,200);
+	ofDrawRectangle(100 + sin(time) * 30, 100 + sin(time) * 30, 200, 200);
 
 }
 
