@@ -6,6 +6,8 @@ void ofApp::setup(){
     
     smile.load("smile.png");
     youFormTheHead.load("youFormTheHead.png");
+    runForest.load("runforest.png");
+    
 
 }
 
@@ -19,7 +21,8 @@ void ofApp::draw(){
 	ofBackground(255);
     
     //adding image
-
+    
+    runForest.draw(ofGetWidth()/2-55, ofGetHeight()/2+60, 350,350);
     youFormTheHead.draw(ofGetWidth()/2-65, ofGetHeight()/2-110);
     smile.draw(ofGetWidth() * 0.5f, ofGetHeight() * 0.40f, 70.0f, 70.0f);
 

@@ -23,5 +23,6 @@ class ofApp : public ofBaseApp{
     
     ofImage smile;
     ofImage youFormTheHead;
+    ofImage runForest;
 		
 };
