@@ -29,6 +29,38 @@ void ofApp::draw(){
 
     ofSetColor(255, 0, 0);
     ofDrawRectangle(100, 100, 200,200);
+    
+    
+    //for the changing star
+    float xPct = (float)(mouseX) / (float)(ofGetWidth());
+    float yPct = (float)(mouseY) / (float)(ofGetHeight());
+    int nTips = 5 + xPct * 20;
+    int nStarPts = nTips ;
+    float angleChangePerPt = TWO_PI / (float)nStarPts;
+    float innerRadius = 0 + yPct*80;
+    float outerRadius = 150;
+    float origx = ofGetWidth()/2;
+    float origy = ofGetHeight()/2;
+    float angle = 0;
+    
+    ofSetColor(0,255,255);
+    ofBeginShape();
+    for (int i = 0; i < nStarPts; i++){
+        if (i % 2 == 0) {
+            // inside point:
+            float x = origx + innerRadius * cos(angle);
+            float y = origy + innerRadius * sin(angle);
+            ofVertex(x,y);
+        } else {
+            // outside point
+            float x = origx + outerRadius * cos(angle);
+            float y = origy + outerRadius * sin(angle);
+            ofVertex(x,y);
+        }
+        angle += angleChangePerPt;
+    }
+    ofEndShape();
+    
 }
 
 //--------------------------------------------------------------
