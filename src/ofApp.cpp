@@ -1,9 +1,11 @@
 #include "ofApp.h"
+#include <math.h>
 
 //--------------------------------------------------------------
 void ofApp::setup(){
     
     smile.load("smile.png");
+    youFormTheHead.load("youFormTheHead.png");
 
 }
 
@@ -18,7 +20,9 @@ void ofApp::draw(){
     
     //adding image
 
+    youFormTheHead.draw(ofGetWidth()/2-65, ofGetHeight()/2-110);
     smile.draw(ofGetWidth() * 0.5f, ofGetHeight() * 0.40f, 70.0f, 70.0f);
+
 
 	ofPushStyle();
 	ofSetColor(ofColor::darkRed);
@@ -26,7 +30,8 @@ void ofApp::draw(){
 	ofDrawEllipse(ofGetWidth() * 0.5f, ofGetHeight() * 0.25f, 20.0f, 20.0f);
 	ofPopStyle();
 	ofDrawRectangle(50.6f, 35.0f, 26.0f, 26.0f);
-
+    
+    ofDrawEllipse(ofGetWidth() * 0.4f, ofGetHeight() * 0.2f, 20.0f, 20.0f);
     ofSetColor(255, 0, 0);
     ofDrawRectangle(100, 100, 200,200);
     
@@ -61,6 +66,10 @@ void ofApp::draw(){
     }
     ofEndShape();
     
+
+	float time = ofGetElapsedTimef();
+    ofDrawRectangle(100+cos(time)*30, 100+cos(time)*30, 200,200);
+
 }
 
 //--------------------------------------------------------------
