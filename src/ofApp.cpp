@@ -26,7 +26,9 @@ void ofApp::draw(){
 	ofDrawEllipse(ofGetWidth() * 0.5f, ofGetHeight() * 0.25f, 20.0f, 20.0f);
 	ofPopStyle();
 	ofDrawRectangle(50.6f, 35.0f, 26.0f, 26.0f);
-    
+
+    ofSetColor(255, 0, 0);
+    ofDrawRectangle(100, 100, 200,200);
 }
 
 //--------------------------------------------------------------
