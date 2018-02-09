@@ -22,5 +22,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     ofImage smile;
+    ofImage youFormTheHead;
 		
 };

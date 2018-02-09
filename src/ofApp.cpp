@@ -4,6 +4,7 @@
 void ofApp::setup(){
     
     smile.load("smile.png");
+    youFormTheHead.load("youFormTheHead.png");
 
 }
 
@@ -18,7 +19,9 @@ void ofApp::draw(){
     
     //adding image
 
+    youFormTheHead.draw(ofGetWidth()/2-65, ofGetHeight()/2-110);
     smile.draw(ofGetWidth() * 0.5f, ofGetHeight() * 0.40f, 70.0f, 70.0f);
+
 
 	ofPushStyle();
 	ofSetColor(ofColor::darkRed);
