@@ -1,4 +1,5 @@
 #include "ofApp.h"
+#include <math.h>
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -32,7 +33,9 @@ void ofApp::draw(){
     
     ofDrawEllipse(ofGetWidth() * 0.4f, ofGetHeight() * 0.2f, 20.0f, 20.0f);
     ofSetColor(255, 0, 0);
-    ofDrawRectangle(100, 100, 200,200);
+
+	float time = ofGetElapsedTimef();
+    ofDrawRectangle(100+cos(time)*30, 100+cos(time)*30, 200,200);
 }
 
 //--------------------------------------------------------------
