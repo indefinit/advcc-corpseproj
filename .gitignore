@@ -77,6 +77,8 @@ xcuserdata
 *.ilk
 *.aps
 ipch/
+.vs/
+*.VC.db
 
 # Eclipse
 .metadata
