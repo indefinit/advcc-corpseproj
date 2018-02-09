@@ -17,6 +17,8 @@ void ofApp::draw(){
 	ofSetColor(ofColor::aliceBlue);
 	ofFill();
 	ofDrawEllipse(ofGetWidth() * 0.5f, ofGetHeight() * 0.25f, 20.0f, 20.0f);
+    ofDrawRectangle(50.6f, 35.0f, 26.0f, 26.0f);
+
 }
 
 //--------------------------------------------------------------
